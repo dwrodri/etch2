@@ -1,9 +1,11 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 75%;
 }
 
 body {
@@ -13,7 +15,7 @@ body {
     color: #313a3d;
     width: 100%;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 8px;
     line-height: 1.6;
     overflow-wrap: break-word;
 }
@@ -38,25 +40,29 @@ header#banner h2 {
     margin: 0 8px 0 0;
 }
 
-header#banner nav {
+header#banner nav li {
     display: inline-block;
+    justify-content: center;
+
 }
 
 header#banner nav ul {
-    list-style-type: none;
     font-size: 1.05em;
+    display: flex;
     text-transform: lowercase;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
 
 header#banner nav ul li {
     display: inline;
-    margin: 0 3px;
+    margin: auto;
+    text-align: center;
 }
 
 header#banner nav ul li a {
-    color: #454545;
+    color: #007dfa;
 }
 
 main#content a {
@@ -83,12 +89,12 @@ main#content h3 {
     font-size: 1.9rem;
 }
 
-main#content h1 + p,
-main#content h2 + p,
-main#content h3 + p,
-main#content h4 + p,
-main#content h5 + p,
-main#content h6 + p {
+main#content h1+p,
+main#content h2+p,
+main#content h3+p,
+main#content h4+p,
+main#content h5+p,
+main#content h6+p {
     margin-top: 5px;
 }
 
@@ -148,7 +154,7 @@ main#content header#post-header h1 {
     line-height: 1.15;
 }
 
-main#content header#post-header > div {
+main#content header#post-header>div {
     display: block;
     font-size: 0.85em;
     color: #767676;
@@ -172,11 +178,13 @@ main#content #toc nav#TableOfContents {
     margin-top: 4px;
 }
 
-main#content #toc nav#TableOfContents > ul, main#content #toc nav#TableOfContents > ol {
+main#content #toc nav#TableOfContents>ul,
+main#content #toc nav#TableOfContents>ol {
     margin-left: -40px;
 }
 
-main#content #toc ul, main#content #toc ol {
+main#content #toc ul,
+main#content #toc ol {
     font-size: 0.98em;
     margin: 0;
     padding: 0 0 0 40px;

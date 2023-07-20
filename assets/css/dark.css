@@ -1,6 +1,6 @@
-{{ if not (eq .Site.Params.dark "on") -}}
+/* {{ if not (eq .Site.Params.dark "on") -}}
 @media (prefers-color-scheme: dark) {
-{{ end -}}
+{{ end -}} */
 html {
     scrollbar-color: #6c6c6c #2e2e2e;
 }
@@ -18,7 +18,7 @@ header#banner a {
 }
 
 header#banner nav ul li a {
-    color: #cccccc;
+    color: #00b1ed;
 }
 
 main#content a {
@@ -48,6 +48,16 @@ main#content ul#posts li a:hover {
 main#content header#post-header div {
     color: #a7a7a7;
 }
-{{- if not (eq .Site.Params.dark "on") -}}
+
+    {
+        {
+        - if not (eq .Site.Params.dark "on") -
+    }
 }
-{{- end -}}
+}
+
+    {
+        {
+        - end -
+    }
+}
